@@ -1,19 +1,62 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
-    <%= stylesheet_link_tag "application" %>
-    <%= javascript_include_tag :defaults %>
-    <%= csrf_meta_tag %>
-    <%= yield(:head) %>
-  </head>
-  <body>
-    <div id="container">
-      <% flash.each do |name, msg| %>
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tag %>
+	<link rel="stylesheet" href="/css/style.css">
+
+	<script src="/js/libs/modernizr-2.0.min.js"></script>
+	<script src="/js/libs/respond.min.js"></script>
+</head>
+<body>
+	<div id="header-container">
+		<header class="wrapper">
+			<h1 id="title"></h1>
+			<nav>
+				<ul>
+					<li><a href="#">Some</a></li>
+					<li><a href="#">navigation</a></li>
+					<li><a href="#">links</a></li>
+				</ul>
+			</nav>
+		</header>
+	</div>
+	<div id="main" class="wrapper">
+		<aside>
+			<img src="/Roflcopter.gif" width="200" />
+		</aside>
+		<article>
+				<p><% flash.each do |name, msg| %>
         <%= content_tag :div, msg, :id => "flash_#{name}" %>
       <% end %>
-      <%= content_tag :h1, yield(:title) if show_title? %>
-      <%= yield %>
-    </div>
-  </body>
+      <%= content_tag :h3, yield(:title) if show_title? %>
+      <%= yield %></p>
+		</article>
+	</div>
+	<div id="footer-container">
+		<footer class="wrapper">
+			<h3>Is your job running?  You'd better go catch it!</h3>
+		</footer>
+	</div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/js/libs/jquery-1.6.2.min.js"><\/script>')</script>
+
+<script src="/js/script.js"></script>
+
+<!--[if lt IE 7 ]>
+	<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script>
+	<script>window.attachEvent("onload",function(){CFInstall.check({mode:"overlay"})})</script>
+<![endif]-->
+
+</body>
 </html>
