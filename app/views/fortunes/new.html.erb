@@ -1,5 +1,8 @@
-<% title "New Fortune" %>
+<% title "New fortune" %>
 
-<%= render 'form' %>
-
-<p><%= link_to "Back to List", fortunes_path %></p>
+<div class="form new">
+  <%= render 'form' %>
+  <div class="link">
+    <%= link_to 'Back', fortunes_path %>
+  </div>
+</form>

@@ -1,12 +1,10 @@
 class CreateFortunes < ActiveRecord::Migration
-  def self.up
+  def change
     create_table :fortunes do |t|
+      t.string :source
       t.text :body
+
       t.timestamps
     end
-  end
-
-  def self.down
-    drop_table :fortunes
   end
 end

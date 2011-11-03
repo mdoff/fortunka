@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Fortunka::Application.config.secret_token = '06c875d1954a8721f51970c2b0789e4fb86cc81367fcbcae176f368b4d76446119c800cbd0e64f6e8ee76312f2fe3a71a311be54c2fe37f3750eee94e09ef895'
+Fortunka::Application.config.secret_token = '67c6d75eb2aef31c1996709283a4064057e40b9995a178a2376faf6f6d79eff8cf1fd6be4b534ec817e4971ceea170363d0c6b0f3101f2bcd57558bb87781c03'

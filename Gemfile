@@ -1,15 +1,50 @@
-source 'http://rubygems.org' # domyślna wartość
-gem 'rails'                  # usuwamy numer wersji; będziemy korzystać zawsze z ostatniej wersji
-# dla lubiących ryzyko – wersja „(bleeding?) edge”
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
+source 'http://rubygems.org'
+
+gem 'rails', '3.1.0'
+
+# Bundle edge Rails instead:
+# gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
-gem 'thin'                   # będziemy używać serwera Thin zamiast – Webrick
 
-# zob. konfiguracja irb ($HOME/.irbrc)
+
+# Gems used only for assets and not required
+# in production environments by default.
+group :assets do
+  gem 'sass-rails', "  ~> 3.1.0"
+  gem 'coffee-rails', "~> 3.1.0"
+  gem 'uglifier'
+end
+
+gem 'jquery-rails'
+
+# Use unicorn as the web server
+# gem 'unicorn'
+
+# Deploy with Capistrano
+# gem 'capistrano'
+
+# To use debugger
+# gem 'ruby-debug19', :require => 'ruby-debug'
+
+group :test do
+  # Pretty printed test output
+  gem 'turn', :require => false
+end
+gem "sass"
+gem "bourbon"
+gem "simple_form"
+gem "coffee-script"
+gem "execjs"
+gem "therubyracer"
+gem 'simple_form'
+
+gem 'responders'
+gem 'kaminari'
+
 group :development do
-  gem 'nifty-generators'
   gem 'wirble'
   gem 'hirb'
+  gem 'faker'
+  gem 'populator'
 end
-gem "mocha", :group => :test

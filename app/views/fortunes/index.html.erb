@@ -1,17 +1,27 @@
-<% title "Fortunes" %>
+<% title "All fortunes" %>
 
-<table>
-  <tr>
-    <th>Body</th>
-  </tr>
-  <% for fortune in @fortunes %>
-    <tr>
-      <td><%= fortune.body %><br/><br/></td>
-      <td><%= link_to "Show", fortune %></td>
-      <td><%= link_to "Edit", edit_fortune_path(fortune) %></td>
-      <td><%= link_to "Destroy", fortune, :confirm => 'Are you sure?', :method => :delete %></td>
-    </tr>
-  <% end %>
-</table>
+<% @fortunes.each do |fortune| %>
+<article class="index">
+  <div class="attribute">
+    <span class="name">Source</span>
+    <span class="value"><%= fortune.source %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">Body</span>
+    <span class="value"><%= fortune.body %></span>
+  </div>
+    <div class="links">
+    <%= link_to 'Show', fortune %> |
+    <%= link_to 'Edit', edit_fortune_path(fortune) %> |
+    <%= link_to 'Destroy', fortune, confirm: 'Are you sure?', method: :delete %>
+  </div>
+</article>
+<% end %>
 
-<p><%= link_to "New Fortune", new_fortune_path %></p>
+<div class="nav">
+  <%= paginate @fortunes %>
+</div>
+
+<div class="link">
+  <%= link_to 'New Fortune', new_fortune_path %>
+</div>

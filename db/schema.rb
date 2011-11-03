@@ -11,9 +11,10 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111016211653) do
+ActiveRecord::Schema.define(:version => 20111103181551) do
 
   create_table "fortunes", :force => true do |t|
+    t.string   "source"
     t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"
