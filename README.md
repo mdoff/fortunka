@@ -1,1 +1,2 @@
-# My Awesome Rails 3.1 App\n\nTODO
+# Fortunka v1.0 alfa
+teraz powinno prawie wszystko działać :)
