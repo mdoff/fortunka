@@ -7,3 +7,18 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+function update(){
+     $.get('/random.json', function(data) {
+        var foo = eval(data);
+        $("#r-body").html(foo.body);
+        $("#r-source").html("— "+foo.source);
+
+    });
+}
+
+$(document).ready( function(){
+         update();
+         setInterval( "update()", 15000 );
+    });
+

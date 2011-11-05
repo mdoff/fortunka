@@ -18,14 +18,9 @@ end
 
 gem 'jquery-rails'
 
-# Use unicorn as the web server
-# gem 'unicorn'
+gem 'omniauth'
+gem 'acts_as_commentable'
 
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
 
 group :test do
   # Pretty printed test output

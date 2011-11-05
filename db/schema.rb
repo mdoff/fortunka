@@ -11,11 +11,29 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111103181551) do
+ActiveRecord::Schema.define(:version => 20111105112559) do
+
+  create_table "comments", :force => true do |t|
+    t.integer  "fortune_id"
+    t.integer  "user_id"
+    t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "comments", ["fortune_id"], :name => "index_comments_on_fortune_id"
 
   create_table "fortunes", :force => true do |t|
     t.string   "source"
     t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

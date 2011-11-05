@@ -64,7 +64,7 @@ SimpleForm.setup do |config|
   # Tell browsers whether to use default HTML5 validations (novalidate option).
   # Default is enabled.
   # config.browser_validations = true
-  config.disable_browser_validations = false
+  config.browser_validations = false
   # Determines whether HTML5 types (:email, :url, :search, :tel) and attributes
   # (e.g. required) are used or not. True by default.
   # Having this on in non-HTML5 compliant sites can cause odd behavior in

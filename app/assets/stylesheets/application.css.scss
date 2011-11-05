@@ -18,3 +18,52 @@ nav.pagination a, nav.pagination .page.current {
 nav.pagination .page.current {
   color: red;
 }
+input[type="text"], textarea {
+  font: inherit;
+}
+div.input, input, textarea, label {
+  float: left;
+}
+div.input {
+  width: 100%;
+}
+.auth {
+text-align:right;
+
+}
+
+a:visited{
+color: #036564;
+}
+a:link{
+color: #036564;
+}
+#notice, #alert {
+  padding: 5px 8px;
+  margin: 10px 0;
+  display: inline;
+}
+#notice {
+  background-color: #CFC;
+  border: solid 1px #6C6;
+}
+#alert {
+  background-color: #FCC;
+  border: solid 1px #C66;
+}
+#random {
+    background-color: #036564;
+    color: white;
+    left: 20px;
+    position: fixed;
+    top: 20px;
+    padding:5px;
+	border-radius: 5px;
+    font-size: 11pt;
+    width: 200px;
+}
+#r-source{
+    text-align: right;
+    font-size: 8pt;
+    font-style: italic;
+}

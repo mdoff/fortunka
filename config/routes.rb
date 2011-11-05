@@ -1,6 +1,20 @@
 Fortunka::Application.routes.draw do
-  resources :fortunes
+  resources :comments
+
+  resources :fortunes do
+    resources :comments
+      collection do
+        get :tags
+    end
+  end
   root :to => 'fortunes#index'
+
+  match "/auth/:provider/callback" => "sessions#create"
+  match "/signout" => "sessions#destroy", :as => :signout
+
+  match "/random" => "fortunes#random"
+
+  #resources :fortunes, :has_many => :comments
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

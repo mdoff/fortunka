@@ -33,4 +33,6 @@ en:
       fortune:
         source: 'source or blank'
         body: 'no special chars, please'
+      comment:
+        body: 'Type comment...'
 
