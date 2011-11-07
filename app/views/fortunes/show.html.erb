@@ -18,19 +18,8 @@
   </div>
   <% if @fortune.comments.any? %>
   <h2>Comments</h2>
-  <% @fortune.comments.each do |comment| %>
-   <p>Autor: <b><%= comment.user.name %></b></p>
-   <div class="comment">
-     <%= comment.body %>
-   </div>
-   <p>
-     <% if(current_user && current_user.id == comment.user.id) %>
-        <%= link_to "Delete", [@fortune, comment], confirm: "Are you sure?", :method => :delete %>
-     <% end %>
-
-   </p>
+   <%= render :partial => 'comments/comment', :collection => @fortune.comments %>
   <% end %>
-<% end %>
   <% if(current_user) %>
     <h2>Add new comment</h2>
     <%= render :partial => 'comments/form' %>
