@@ -10,9 +10,13 @@
 
 function update(){
      $.get('/random.json', function(data) {
-        var foo = eval(data);
-        $("#r-body").html(foo.body);
-        $("#r-source").html("— "+foo.source);
+        if(data.body.length> 55){
+            $("#r-body").html(data.body.substring(0,46) + "... <a style='color:white;' href='/fortunes/"+data.id+"'>more</a>");
+        }
+         else{
+            $("#r-body").html(data.body);
+        }
+        $("#r-source").html("— "+data.source);
 
     });
 }

@@ -35,8 +35,11 @@
 
 <body>
   <header>
+    <div id="random">
+        <div id="r-body"></div>
+        <div id="r-source"></div>
+    </div>
      <%= content_tag :h1, "Fortunka" %>
-
     <div class="auth">
         <% if current_user %>
             Welcome <%= current_user.name %>!
@@ -50,10 +53,6 @@
     <% end %>
   </header>
   <div role="main">
-  <div id="random">
-    <div id="r-body"></div>
-    <div id="r-source"></div>
-  </div>
     <%= content_tag :h1, yield(:title) if show_title? %>
     <%= yield %>
   </div>
