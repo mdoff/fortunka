@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4ca8200b-6541-4214-963b-64a68c947162" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/comments/new.erb" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/fortunka.iml" afterPath="$PROJECT_DIR$/.idea/fortunka.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
     </list>
     <ignored path="fortunka.iws" />
     <ignored path=".idea/workspace.xml" />
